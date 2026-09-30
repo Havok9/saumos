@@ -86,11 +86,6 @@ a:hover{color:#1E2A33}
           </button>
         </sc-for>
       </div>
-      <a href="urgence.html" style="background:#E0533D;color:#FFFFFF;text-decoration:none;border-radius:28px;padding:18px 20px;display:grid;grid-template-columns:52px 1fr 24px;gap:14px;align-items:center;box-shadow:0 6px 0 #B23A28, 0 22px 40px -10px rgba(224,83,61,.6), inset 0 1px 0 rgba(255,255,255,.35);transition:transform .12s" style-active="transform:translateY(5px);box-shadow:0 1px 0 #B23A28, 0 8px 16px -6px rgba(224,83,61,.5)">
-        <span style="width:52px;height:52px;border-radius:16px;border:2.5px solid #FFFFFF;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700">＋</span>
-        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;line-height:1.1">Urgences</span><span style="font-size:14px;font-weight:700;color:#FDECE8">Gestes, numéros &amp; trousse</span></div>
-        <span style="font-size:24px;line-height:1">›</span>
-      </a>
     </section>
 
     <section style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
@@ -105,6 +100,11 @@ a:hover{color:#1E2A33}
     </section>
 
 
+      <a href="urgence.html" style="background:#E0533D;color:#FFFFFF;text-decoration:none;border-radius:28px;padding:18px 20px;display:grid;grid-template-columns:52px 1fr 24px;gap:14px;align-items:center;box-shadow:0 6px 0 #B23A28, 0 22px 40px -10px rgba(224,83,61,.6), inset 0 1px 0 rgba(255,255,255,.35);transition:transform .12s" style-active="transform:translateY(5px);box-shadow:0 1px 0 #B23A28, 0 8px 16px -6px rgba(224,83,61,.5)">
+        <span style="width:52px;height:52px;border-radius:16px;border:2.5px solid #FFFFFF;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700">＋</span>
+        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;line-height:1.1">Urgences</span><span style="font-size:14px;font-weight:700;color:#FDECE8">Gestes, numéros &amp; trousse</span></div>
+        <span style="font-size:24px;line-height:1">›</span>
+      </a>
   </sc-if>
 
   <sc-if value="{{ isSuiviTab }}" hint-placeholder-val="{{ false }}">
@@ -243,17 +243,22 @@ a:hover{color:#1E2A33}
     <section style="background:#3F86B5;color:#FFFFFF;border-radius:28px;padding:20px;box-shadow:0 10px 30px rgba(30,42,51,.07);display:flex;flex-direction:column;gap:14px">
       <span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#FBE3DE">📣 Avis de recherche</span>
       <div style="background:#FFFFFF;color:#1E2A33;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center">
-        <span style="font-family:'Young Serif',serif;font-size:34px;line-height:1;color:#3F86B5">Chat perdu</span>
+        <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:34px;line-height:1;color:#3F86B5">Chat perdu</span>
         <img src="assets/saumos.png" alt="{{ name }}" style="width:70%;height:auto;display:block">
-        <span style="font-family:'Young Serif',serif;font-size:30px;line-height:1">{{ name }}</span>
+        <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:30px;line-height:1">{{ name }}</span>
         <span style="font-size:14px;line-height:1.45;color:#4A5863">{{ lostDesc }}</span>
         <div style="display:flex;flex-direction:column;gap:2px">
           <span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6B7A86">Puce</span>
           <span style="font-size:15px;font-weight:600">{{ chip }}</span>
         </div>
-        <a href="{{ contactHref }}" style="font-family:'Young Serif',serif;font-size:24px;color:#1E2A33;text-decoration:none">📞 Caserne · {{ contactPhone }}</a>
+        <a href="{{ contactHref }}" style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;color:#1E2A33;text-decoration:none">📞 Caserne · {{ contactPhone }}</a>
       </div>
-      <button onClick="{{ shareLost }}" style="border:0;border-radius:999px;min-height:52px;background:#FFFFFF;color:#1E2A33;font:700 16px 'Nunito',sans-serif;cursor:pointer">{{ shareLabel }}</button>
+      <button onClick="{{ shareLost }}" style="border:0;border-radius:999px;min-height:52px;background:#FFFFFF;color:#1E2A33;font:800 16px 'Nunito',sans-serif;cursor:pointer;box-shadow:0 5px 0 #C5D2DB">{{ shareLabel }}</button>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <a href="{{ smsHref }}" style="min-height:48px;border-radius:16px;background:rgba(255,255,255,.18);color:#FFFFFF;text-decoration:none;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px">💬 SMS</a>
+        <a href="{{ waHref }}" target="_blank" style="min-height:48px;border-radius:16px;background:rgba(255,255,255,.18);color:#FFFFFF;text-decoration:none;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px">🟢 WhatsApp</a>
+        <button onClick="{{ copyLost }}" style="min-height:48px;border:0;border-radius:16px;background:rgba(255,255,255,.18);color:#FFFFFF;font:800 14px 'Nunito',sans-serif;cursor:pointer">{{ copyLabel }}</button>
+      </div>
       <span style="font-size:14px;line-height:1.45;color:#E3EFF6">Déclarer la perte sur i-cad.fr, prévenir les vétérinaires du quartier et la mairie, et fouiller les caves et garages : un chat qui a peur se cache souvent tout près.</span>
     </section>
   </sc-if>
@@ -507,7 +512,7 @@ a:hover{color:#1E2A33}
   </nav>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390},&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Saumos&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;birthDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-07-22&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;chip&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;À renseigner&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;neutered&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Pas encore, vers 5-6 mois&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;lastVaccine&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;À 8 semaines, rappel à 12&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;lostDesc&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Chaton à poils longs, gris et blanc, yeux bleus, nez rose. Doux mais craintif.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat perdu&quot;},&quot;contactPhone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;00 00 00 00 00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat perdu&quot;},&quot;vetName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Clinique à renseigner&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Véto&quot;},&quot;vetPhone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;00 00 00 00 00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Véto&quot;},&quot;urgentUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;QR code&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390},&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Saumos&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;birthDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-07-22&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;chip&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;À renseigner&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;neutered&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Pas encore, vers 5-6 mois&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;lastVaccine&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;À 8 semaines, rappel à 12&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat&quot;},&quot;lostDesc&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Chaton à poils longs, gris et blanc, yeux bleus, nez rose. Doux mais craintif.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat perdu&quot;},&quot;contactPhone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;05 57 80 89 40&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Chat perdu&quot;},&quot;vetName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Clinique à renseigner&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Véto&quot;},&quot;vetPhone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;00 00 00 00 00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Véto&quot;},&quot;urgentUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;QR code&quot;}}">
 class Component extends DCLogic {
   EDITOR_PASS = '';
   state = { rules: 'do', food: 'yes', sheet: null, shared: '', tab: 'home', v3: 0, v3spin: false, logs: [], comments: [], who: '', whoInput: '', commentText: '', commentMsg: '', syncUrl: '', syncState: 'local', editOpen: false, logged: false, loginUser: '', loginPass: '', loginErr: '', edits: {}, draft: {}, weights: null, rdv: [], treat: [], ster: false, wDate: '', wKg: '', rdvDate: '', rdvMotif: '', treatInput: '' };
@@ -538,7 +543,7 @@ class Component extends DCLogic {
     let who = ''; try { who = localStorage.getItem('saumos-who') || ''; } catch (e) {}
     this.setState({ who });
     fetch('config.json?t=' + Date.now()).then(r => r.json()).then(c => this.setState({ syncUrl: (c && c.syncUrl) || '' }, () => this._sync())).catch(() => this._sync());
-    this._syncI = setInterval(() => this._sync(), 20000);
+    this._syncI = setInterval(() => this._sync(), 8000);
     this._clockI = setInterval(() => this.forceUpdate(), 60000);
     this._onVis = () => { if (!document.hidden) this._sync(); }; document.addEventListener('visibilitychange', this._onVis);
     let ster = false; try { ster = localStorage.getItem('saumos-ster') === '1'; } catch (e) {}
@@ -663,7 +668,7 @@ class Component extends DCLogic {
     const st = this.state;
     const mNames = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
     const album = Array.from({ length: 12 }, (_, i) => { const d = new Date(birth.getFullYear(), birth.getMonth() + i, 1); return { id: 'saumos-album-' + i, label: i === 0 ? 'Naissance' : i + ' mois', month: isNaN(d) ? '' : mNames[d.getMonth()] + ' ' + d.getFullYear(), ph: i === 0 ? 'Photo de naissance' : 'Photo à ' + i + ' mois' }; });
-    const contactPhone = this._c('contactPhone') ?? '00 00 00 00 00';
+    const contactPhone = this._c('contactPhone') ?? '05 57 80 89 40';
     const lostDesc = this._c('lostDesc') ?? 'Chaton à poils longs, gris et blanc, yeux bleus, nez rose. Doux mais craintif.';
     let urgUrl = 'urgence.html';
     try { urgUrl = new URL('urgence.html', window.location.href).href; } catch (e) {}
@@ -672,14 +677,25 @@ class Component extends DCLogic {
     return {
       album, contactPhone, contactHref: 'tel:' + contactPhone.replace(/\s/g, ''), lostDesc, chip, qrSrc, qrBg: 'url("' + qrSrc + '")',
       shareLabel: st.shared || "📤 Partager l'avis de recherche",
-      shareLost: async () => {
-        const text = 'CHAT PERDU : ' + name + '. ' + lostDesc + ' Puce : ' + chip + '. Caserne : ' + contactPhone;
-        try {
-          if (navigator.share) { await navigator.share({ title: 'Chat perdu : ' + name, text, url: window.location.href }); return; }
-          await navigator.clipboard.writeText(text);
-          this.setState({ shared: '✅ Texte copié' }); setTimeout(() => this.setState({ shared: '' }), 1800);
-        } catch (e) {}
-      },
+      ...(() => {
+        const text = '🚨 CHAT PERDU : ' + name + '. ' + lostDesc + ' Puce : ' + chip + '. Si vous le voyez, appelez la caserne : ' + contactPhone;
+        let url = ''; try { url = window.location.href.split('#')[0]; } catch (x) {}
+        const full = text + (url ? ' ' + url : '');
+        const copy = async () => {
+          let ok = false;
+          try { await navigator.clipboard.writeText(full); ok = true; } catch (x) {
+            try { const ta = document.createElement('textarea'); ta.value = full; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); ok = document.execCommand('copy'); ta.remove(); } catch (y) {} }
+          this.setState({ copied: ok ? '✅ Copié' : '⚠️ Impossible' }); setTimeout(() => this.setState({ copied: '' }), 1800);
+        };
+        return {
+          smsHref: 'sms:?&body=' + encodeURIComponent(full), waHref: 'https://wa.me/?text=' + encodeURIComponent(full),
+          copyLabel: st.copied || '📋 Copier', copyLost: copy,
+          shareLost: () => {
+            if (navigator.share) { navigator.share({ title: 'Chat perdu : ' + name, text: full }).catch(err => { if (!err || err.name !== 'AbortError') copy(); }); }
+            else copy();
+          }
+        };
+      })(),
       printQr: () => { const w = window.open('', '_blank'); if (!w) return; w.document.write('<html><body style="margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;gap:16px"><h1 style="margin:0">🚑 Urgences ' + name + '</h1><img src="' + qrSrc + '" style="width:60vmin" onload="window.print()"><p style="margin:0;font-size:18px">Scanner pour les gestes et numéros utiles</p></body></html>'); w.document.close(); },
       icad: [
         { e: '📇', title: 'Vérifier ses coordonnées', text: 'Le numéro de téléphone lié à la puce doit être le bon. Il se modifie en ligne sur i-cad.fr.' },
@@ -721,21 +737,50 @@ class Component extends DCLogic {
       ]
     };
   }
+  _pend() { return this._list('saumos-pending', []); }
+  _setPend(p) { try { localStorage.setItem('saumos-pending', JSON.stringify(p)); } catch (e) {} }
+  _same(x, o) { return o.type === 'comment' ? (x.by === o.by && x.text === o.text && x.date === o.date) : (x.date === o.date && x.task === o.task); }
   async _sync() {
     const url = this.state.syncUrl;
     if (!url) { this.setState({ logs: this._list('saumos-logs', []), comments: this._list('saumos-comments', []), syncState: 'local' }); return; }
-    try { const r = await fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now()); const j = await r.json();
-      const upd = { logs: j.entries || [], comments: j.comments || [], syncState: 'ok' };
+    if (this._syncing) { this._again = true; return; }
+    this._syncing = true;
+    try {
+      const r = await fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
+      const j = await r.json();
+      const logs = [...(j.entries || [])], comments = [...(j.comments || [])];
+      // pending items stay visible until the server really has them
+      let pend = this._pend().filter(o => !(o.type === 'comment' ? comments : logs).some(x => this._same(x, o)));
+      this._setPend(pend);
+      pend.forEach(o => (o.type === 'comment' ? comments : logs).push(o));
+      const upd = { logs, comments, syncState: pend.length ? 'sending' : 'ok' };
       if (j.config && typeof j.config === 'object') { upd.edits = j.config; try { localStorage.setItem('saumos-edit', JSON.stringify(j.config)); } catch (x) {} }
-      this.setState(upd); } catch (e) { this.setState({ syncState: 'error' }); }
+      this.setState(upd);
+      if (pend.length) this._flush();
+    } catch (e) { this.setState({ syncState: this._pend().length ? 'sending' : 'error' }); }
+    this._syncing = false;
+    if (this._again) { this._again = false; setTimeout(() => this._sync(), 300); }
+  }
+  async _flush() {
+    const url = this.state.syncUrl; if (!url || this._flushing) return;
+    this._flushing = true;
+    const now = Date.now();
+    const pend = this._pend();
+    for (const o of pend) {
+      if (o._sent && now - o._sent < 15000) continue;
+      o._sent = now; this._setPend(pend);
+      try { const { _sent, ...body } = o; await fetch(url, { method: 'POST', body: JSON.stringify(body) }); } catch (e) { o._sent = 0; this._setPend(pend); }
+    }
+    this._flushing = false;
+    setTimeout(() => this._sync(), 1200);
   }
   async _add(obj) {
     const sk = obj.type === 'comment' ? 'comments' : 'logs', key = obj.type === 'comment' ? 'saumos-comments' : 'saumos-logs';
-    if (obj.type === 'entry' && this.state.logs.some(l => l.date === obj.date && l.task === obj.task)) return;
+    if (obj.type === 'entry' && this.state.logs.some(l => this._same(l, obj))) return;
     if (!this.state.syncUrl) { this._setL(key, sk, [...this.state[sk], obj]); return; }
-    this.setState(s => ({ [sk]: [...s[sk], obj] }));
-    try { await fetch(this.state.syncUrl, { method: 'POST', body: JSON.stringify(obj) }); } catch (e) {}
-    this._sync();
+    this._setPend([...this._pend(), obj]);
+    this.setState(s => ({ [sk]: [...s[sk], obj], syncState: 'sending' }));
+    this._flush();
   }
   _suivi() {
     const st = this.state, now = new Date(), pad = n => String(n).padStart(2, '0');
@@ -755,10 +800,10 @@ class Component extends DCLogic {
     const tk = dkey(now), hm = d => { const x = new Date(d); return isNaN(x) ? '' : pad(x.getHours()) + 'h' + pad(x.getMinutes()); };
     const todayList = T.filter(t => applies(t, now));
     const todayTasks = todayList.map(t => { const e = find(tk, t.k);
-      return { ...t, sub: e ? '✓ Fait par ' + e.by + ' à ' + hm(e.at) : (t.f === 'd' ? '1 fois par jour' : 'Le dimanche'), subFg: e ? '#1F5A80' : '#6B7A86',
+      return { ...t, sub: e ? (this._pend().some(o => this._same(o, e)) ? '⏳ Envoi… (' + e.by + ')' : '✓ Fait par ' + e.by + ' à ' + hm(e.at)) : (t.f === 'd' ? '1 fois par jour' : 'Le dimanche'), subFg: e ? '#1F5A80' : '#6B7A86',
         bg: e ? '#E3EFF6' : '#F2F5F8', mark: e ? '✓' : '', boxBg: e ? '#3F86B5' : '#FFFFFF', boxBorder: e ? '#3F86B5' : '#9CC3D5', cursor: e ? 'default' : 'pointer',
         shadow: e ? 'none' : '0 4px 0 #DCE4EA',
-        check: () => { if (e) return; if (!st.who) { this.setState({ commentMsg: '' }); return; } this._add({ type: 'entry', date: tk, task: t.k, by: st.who, at: new Date().toISOString() }); } };
+        check: () => { if (e) return; let w = st.who; if (!w) { w = (window.prompt('Ton prénom ?') || '').trim(); if (!w) return; try { localStorage.setItem('saumos-who', w); } catch (x) {} this.setState({ who: w }); } this._add({ type: 'entry', date: tk, task: t.k, by: w, at: new Date().toISOString() }); } };
     });
     const done = todayTasks.filter(t => t.mark).length, left = todayTasks.length - done, late = now.getHours() >= 20 && left > 0;
     const mon = new Date(now); mon.setHours(0, 0, 0, 0); mon.setDate(mon.getDate() - ((mon.getDay() + 6) % 7));
@@ -774,7 +819,7 @@ class Component extends DCLogic {
     const label = k => (T.find(t => t.k === k) || { label: k }).label;
     const frDT = s => { const x = new Date(s); return isNaN(x) ? s : x.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }) + ' · ' + hm(s); };
     const adminLog = [...st.logs.map(l => ({ at: l.at, e: '✅', text: label(l.task), meta: (l.by || '?') + ' · ' + frDT(l.at) })), ...st.comments.map(c => ({ at: c.at, e: '💬', text: c.text, meta: (c.by || '?') + ' · ' + frDT(c.at) }))].sort((a, b) => a.at < b.at ? 1 : -1).slice(0, 80);
-    const sync = { local: ['Local', '#F2F5F8', '#6B7A86'], ok: ['🟢 Synchronisé', '#E3EFF6', '#1F5A80'], error: ['⚠️ Hors ligne', '#FBE3DE', '#9A2E20'] }[st.syncState] || ['Local', '#F2F5F8', '#6B7A86'];
+    const sync = { local: ['Local', '#F2F5F8', '#6B7A86'], ok: ['🟢 Synchronisé', '#E3EFF6', '#1F5A80'], sending: ['⏳ Envoi…', '#FFF4D6', '#7A5A00'], error: ['⚠️ Hors ligne', '#FBE3DE', '#9A2E20'] }[st.syncState] || ['Local', '#F2F5F8', '#6B7A86'];
     return {
       todayLabel: now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }),
       todayTasks, weekRows, weekDays, adminLog, noHistory: adminLog.length === 0,
