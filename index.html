@@ -88,16 +88,6 @@ a:hover{color:#1E2A33}
       </div>
     </section>
 
-    <section style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <button onClick="{{ openVacc }}" style-active="transform:translateY(5px);box-shadow:0 1px 0 #DCE4EA" style="border:0;text-align:left;cursor:pointer;background:#FFFFFF;color:#1E2A33;border-radius:26px;padding:16px;min-height:130px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;font-family:'Nunito',sans-serif;box-shadow:0 6px 0 #DCE4EA, 0 20px 32px -12px rgba(30,42,51,.22), inset 0 1px 0 rgba(255,255,255,.6);transition:transform .12s,box-shadow .12s">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start"><span style="font-size:28px;line-height:1">💉</span><span style="font-size:22px;line-height:1;color:#1F5A80">›</span></div>
-          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:19px;line-height:1.1">Vaccins & vermifuge</span><span style="font-size:13px;font-weight:700;color:#1F5A80">{{ santeNextShort }}</span></div>
-        </button>
-        <button onClick="{{ openPesee }}" style-active="transform:translateY(5px);box-shadow:0 1px 0 #B3D2E6" style="border:0;text-align:left;cursor:pointer;background:#E3EFF6;color:#1E2A33;border-radius:26px;padding:16px;min-height:130px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;font-family:'Nunito',sans-serif;box-shadow:0 6px 0 #B3D2E6, 0 20px 32px -12px rgba(63,134,181,.45), inset 0 1px 0 rgba(255,255,255,.6);transition:transform .12s,box-shadow .12s">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start"><span style="font-size:28px;line-height:1">⚖️</span><span style="font-size:22px;line-height:1;color:#1F5A80">›</span></div>
-          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:19px;line-height:1.1">La pesée</span><span style="font-size:13px;font-weight:700;color:#1F5A80">{{ lastWeight }} kg</span></div>
-        </button>
-    </section>
 
 
       <a href="urgence.html" style="background:#E0533D;color:#FFFFFF;text-decoration:none;border-radius:28px;padding:18px 20px;display:grid;grid-template-columns:52px 1fr 24px;gap:14px;align-items:center;box-shadow:0 6px 0 #B23A28, 0 22px 40px -10px rgba(224,83,61,.6), inset 0 1px 0 rgba(255,255,255,.35);transition:transform .12s" style-active="transform:translateY(5px);box-shadow:0 1px 0 #B23A28, 0 8px 16px -6px rgba(224,83,61,.5)">
@@ -112,6 +102,35 @@ a:hover{color:#1E2A33}
       <span style="font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3F86B5">Suivi</span>
       <h1 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:40px;line-height:1.05;margin:0">Les tâches</h1>
       <span style="font-size:15px;color:#6B7A86">Coche ce que tu as fait. Tout le monde voit la même chose.</span>
+    </section>
+    <section style="background:#FFFFFF;border-radius:28px;padding:16px;box-shadow:0 10px 30px rgba(30,42,51,.07);display:flex;flex-direction:column;gap:10px">
+      <span style="font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3F86B5;padding:4px 4px 0">🩺 Santé</span>
+      <button onClick="{{ openVacc }}" style-active="transform:translateY(4px);box-shadow:0 1px 0 #DCE4EA" style="border:0;text-align:left;cursor:pointer;background:#F2F5F8;color:#1E2A33;border-radius:20px;padding:12px 14px;display:grid;grid-template-columns:44px 1fr 20px;gap:12px;align-items:center;font-family:'Nunito',sans-serif;box-shadow:0 4px 0 #DCE4EA, 0 14px 24px -12px rgba(30,42,51,.25);transition:transform .12s,box-shadow .12s">
+        <span style="width:44px;height:44px;border-radius:14px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:22px">💉</span>
+        <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:16px;font-weight:800">Vaccins & vermifuge</span><span style="font-size:13px;font-weight:700;color:#1F5A80">{{ santeNextShort }}</span></span>
+        <span style="font-size:20px;font-weight:800;color:#1F5A80">›</span>
+      </button>
+      <button onClick="{{ openPesee }}" style-active="transform:translateY(4px);box-shadow:0 1px 0 #B3D2E6" style="border:0;text-align:left;cursor:pointer;background:#E3EFF6;color:#1E2A33;border-radius:20px;padding:12px 14px;display:grid;grid-template-columns:44px 1fr 20px;gap:12px;align-items:center;font-family:'Nunito',sans-serif;box-shadow:0 4px 0 #B3D2E6, 0 14px 24px -12px rgba(30,42,51,.25);transition:transform .12s,box-shadow .12s">
+        <span style="width:44px;height:44px;border-radius:14px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:22px">⚖️</span>
+        <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:16px;font-weight:800">La pesée</span><span style="font-size:13px;font-weight:700;color:#1F5A80">{{ lastWeight }} kg</span></span>
+        <span style="font-size:20px;font-weight:800;color:#1F5A80">›</span>
+      </button>
+    </section>
+    <sc-if value="{{ hasRappel }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ openVacc }}" style="border:0;text-align:left;cursor:pointer;background:#F2C94C;color:#1E2A33;border-radius:22px;padding:14px 16px;display:grid;grid-template-columns:36px 1fr 20px;gap:10px;align-items:center;font-family:'Nunito',sans-serif;box-shadow:0 5px 0 #C9A12E, 0 16px 28px -10px rgba(201,161,46,.6)">
+        <span style="font-size:26px">🔔</span>
+        <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:800">Rappel santé</span><span style="font-size:13px">{{ rappelText }}</span></span>
+        <span style="font-size:18px;font-weight:800">›</span>
+      </button>
+    </sc-if>
+    <section style="background:#FFFFFF;border-radius:28px;padding:20px;box-shadow:0 10px 30px rgba(30,42,51,.07);display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span style="font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3F86B5">⛲ Fontaine à eau</span><span style="font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;background:{{ fontaine.bg }};color:{{ fontaine.fg }}">{{ fontaine.when }}</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="background:#F2F5F8;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;color:#6B7A86;font-weight:700">Mise en service</span><span style="font-size:15px;font-weight:800">{{ fontaine.start }}</span></div>
+        <div style="background:#F2F5F8;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;color:#6B7A86;font-weight:700">Prochain filtre</span><span style="font-size:15px;font-weight:800">{{ fontaine.next }}</span></div>
+      </div>
+      <div style="height:10px;border-radius:999px;background:#E4EBF0;overflow:hidden"><div style="height:100%;width:{{ fontaine.pct }};background:#3F86B5;border-radius:999px"></div></div>
+      <span style="font-size:13px;color:#6B7A86">Filtre à changer tous les mois. La case apparaît dans les tâches le jour J.</span>
     </section>
 
     <section style="background:#FFFFFF;border-radius:28px;padding:20px;box-shadow:0 10px 30px rgba(30,42,51,.07);display:flex;flex-direction:column;gap:12px">
@@ -299,6 +318,24 @@ a:hover{color:#1E2A33}
         </sc-if>
 
         <sc-if value="{{ isVacc }}" hint-placeholder-val="{{ false }}">
+    <section style="background:#FFFFFF;border-radius:28px;padding:20px;box-shadow:0 10px 30px rgba(30,42,51,.07);display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3F86B5">🧴 Produits donnés</span>
+      <span style="font-size:14px;color:#6B7A86;margin-top:-4px">Un rappel s'affiche un mois avant chaque échéance.</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <sc-for list="{{ products }}" as="p" hint-placeholder-count="4">
+          <div style="background:#F2F5F8;border-radius:18px;padding:12px;display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start">
+            <span style="width:44px;height:44px;border-radius:14px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:22px">{{ p.e }}</span>
+            <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
+              <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span style="font-size:15px;font-weight:800">{{ p.title }}</span><sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;background:{{ p.badgeBg }};color:{{ p.badgeFg }}">{{ p.badge }}</span></sc-if></div>
+              <span style="font-size:14px;color:#1E2A33">{{ p.product }}</span>
+              <span style="font-size:13px;color:#6B7A86">{{ p.done }}</span>
+              <span style="font-size:13px;font-weight:700;color:#1F5A80">{{ p.next }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <span style="font-size:12px;color:#6B7A86">L'admin renseigne les produits et les dates dans l'espace éditeur 🔐.</span>
+    </section>
     <section style="background:#FFFFFF;border-radius:28px;padding:20px;box-shadow:0 10px 30px rgba(30,42,51,.07);display:flex;flex-direction:column;gap:12px">
       <span style="font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3F86B5">📅 Calendrier</span>
       <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;margin:0;line-height:1.1">Vaccins et vermifuge</h2>
@@ -732,7 +769,8 @@ class Component extends DCLogic {
       },
       editGroups: [
         { title: '🐾 ' + (this._c('name') || 'Saumos'), fields: [F('name', 'Prénom', 'text', 'Saumos'), F('birthDate', 'Date de naissance', 'date'), F('weightToday', "Poids d'aujourd'hui (kg)", 'number', '0,95', '0.01'), F('lostDesc', 'Description (avis de recherche)', 'text')] },
-        { title: '💉 Santé', fields: [F('vaccin1', '1er vaccin fait le', 'date'), F('vaccin2', 'Rappel du vaccin fait le', 'date'), F('vermifuge', 'Dernier vermifuge le', 'date'), F('chip', 'N° de puce', 'text', '250 26…'), F('neutered', 'Stérilisation', 'text', 'Pas encore')] },
+        { title: '💉 Santé', fields: [F('vaccin1', '1er vaccin fait le', 'date'), F('vaccin2', 'Rappel du vaccin fait le', 'date'), F('vaccinProduit', 'Vaccin : nom du produit', 'text', 'Purevax…'), F('vaccinNext', 'Vaccin : prochain rappel', 'date'), F('vermifuge', 'Dernier vermifuge le', 'date'), F('vermiProduit', 'Vermifuge : nom du produit', 'text', 'Milbemax…'), F('vermiNext', 'Vermifuge : prochain', 'date'), F('antipuces', 'Dernier antipuces le', 'date'), F('puceProduit', 'Antipuces : nom du produit', 'text', 'Frontline…'), F('antipucesNext', 'Antipuces : prochain', 'date'), F('chip', 'N° de puce', 'text', '250 26…'), F('neutered', 'Stérilisation', 'text', 'Pas encore')] },
+        { title: '⛲ Fontaine', fields: [F('fontaineStart', 'Mise en service le', 'date')] },
         { title: '📞 Contacts', fields: [F('contactPhone', 'Numéro de la caserne', 'tel', '02 …'), F('vetName', 'Vétérinaire', 'text', 'Clinique…'), F('vetPhone', 'Téléphone du véto', 'tel', '02 …')] }
       ]
     };
@@ -789,18 +827,20 @@ class Component extends DCLogic {
       { k: 'eau', e: '💧', label: 'Vérifier niveau eau et propreté', f: 'd' },
       { k: 'croq', e: '🥣', label: 'Vérifier niveau croquettes et propreté', f: 'd' },
       { k: 'litiere', e: '🚽', label: 'Retirer déjection litière', f: 'd' },
+      { k: 'litiere_std', e: '📞', label: 'Nettoyage de la litière du standard', f: 'd' },
       { k: 'litiere_tout', e: '🔄', label: 'Changer intégralité litière', f: 's' },
       { k: 'fontaine', e: '⛲', label: 'Nettoyage cuve et fontaine', f: 's' },
       { k: 'menage', e: '🧹', label: 'Passer le balai bureau et serpillière', f: 's' },
       { k: 'friandise', e: '🍬', label: 'Friandise : moitié sachet', f: 's' },
-      { k: 'visuel', e: '👀', label: 'Vérification visuelle du chat', f: 's' }
+      { k: 'visuel', e: '👀', label: 'Vérification visuelle du chat', f: 's' },
+      { k: 'filtre', e: '🫧', label: 'Changer le filtre de la fontaine', f: 'm' }
     ];
-    const applies = (t, d) => t.f === 'd' || d.getDay() === 0;
+    const applies = (t, d) => t.f === 'd' || (t.f === 's' && d.getDay() === 0) || (t.f === 'm' && d.getDate() === 15 && d >= new Date(2026, 8, 15));
     const find = (dk, k) => st.logs.find(l => l.date === dk && l.task === k);
     const tk = dkey(now), hm = d => { const x = new Date(d); return isNaN(x) ? '' : pad(x.getHours()) + 'h' + pad(x.getMinutes()); };
     const todayList = T.filter(t => applies(t, now));
     const todayTasks = todayList.map(t => { const e = find(tk, t.k);
-      return { ...t, sub: e ? (this._pend().some(o => this._same(o, e)) ? '⏳ Envoi… (' + e.by + ')' : '✓ Fait par ' + e.by + ' à ' + hm(e.at)) : (t.f === 'd' ? '1 fois par jour' : 'Le dimanche'), subFg: e ? '#1F5A80' : '#6B7A86',
+      return { ...t, sub: e ? (this._pend().some(o => this._same(o, e)) ? '⏳ Envoi… (' + e.by + ')' : '✓ Fait par ' + e.by + ' à ' + hm(e.at)) : (t.f === 'd' ? '1 fois par jour' : t.f === 'm' ? 'Le 15 de chaque mois' : 'Le dimanche'), subFg: e ? '#1F5A80' : '#6B7A86',
         bg: e ? '#E3EFF6' : '#F2F5F8', mark: e ? '✓' : '', boxBg: e ? '#3F86B5' : '#FFFFFF', boxBorder: e ? '#3F86B5' : '#9CC3D5', cursor: e ? 'default' : 'pointer',
         shadow: e ? 'none' : '0 4px 0 #DCE4EA',
         check: () => { if (e) return; let w = st.who; if (!w) { w = (window.prompt('Ton prénom ?') || '').trim(); if (!w) return; try { localStorage.setItem('saumos-who', w); } catch (x) {} this.setState({ who: w }); } this._add({ type: 'entry', date: tk, task: t.k, by: w, at: new Date().toISOString() }); } };
@@ -820,7 +860,32 @@ class Component extends DCLogic {
     const frDT = s => { const x = new Date(s); return isNaN(x) ? s : x.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }) + ' · ' + hm(s); };
     const adminLog = [...st.logs.map(l => ({ at: l.at, e: '✅', text: label(l.task), meta: (l.by || '?') + ' · ' + frDT(l.at) })), ...st.comments.map(c => ({ at: c.at, e: '💬', text: c.text, meta: (c.by || '?') + ' · ' + frDT(c.at) }))].sort((a, b) => a.at < b.at ? 1 : -1).slice(0, 80);
     const sync = { local: ['Local', '#F2F5F8', '#6B7A86'], ok: ['🟢 Synchronisé', '#E3EFF6', '#1F5A80'], sending: ['⏳ Envoi…', '#FFF4D6', '#7A5A00'], error: ['⚠️ Hors ligne', '#FBE3DE', '#9A2E20'] }[st.syncState] || ['Local', '#F2F5F8', '#6B7A86'];
+    const D0 = new Date(now); D0.setHours(0, 0, 0, 0);
+    const pd = v => { if (!v) return null; const x = new Date(v); return isNaN(x) ? null : x; };
+    const fr = x => x.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    const inDays = x => Math.round((x - D0) / 86400000);
+    const fStart = pd(this._c('fontaineStart')) || new Date(2026, 8, 15);
+    let fNext = new Date(fStart); while (fNext < D0) fNext.setMonth(fNext.getMonth() + 1);
+    const fPrev = new Date(fNext); fPrev.setMonth(fPrev.getMonth() - 1);
+    const fn = inDays(fNext);
+    const fontaine = { start: fr(fStart), next: fr(fNext), when: fn === 0 ? "Aujourd'hui" : 'Dans ' + fn + ' j', pct: Math.min(100, Math.max(0, (D0 - fPrev) / (fNext - fPrev) * 100)) + '%', bg: fn <= 2 ? '#FBE3DE' : '#E3EFF6', fg: fn <= 2 ? '#9A2E20' : '#1F5A80' };
+    const prod = (e, title, nameK, dateK, nextK, monthsDef) => {
+      const done = pd(this._c(dateK)); let next = pd(this._c(nextK));
+      if (!next && done && monthsDef) { next = new Date(done); next.setMonth(next.getMonth() + monthsDef); }
+      const n = next ? inDays(next) : null, soon = n !== null && n <= 30;
+      return { e, title, product: this._c(nameK) || 'Produit à renseigner', done: done ? 'Fait le ' + fr(done) : 'Date à renseigner',
+        next: next ? (n < 0 ? 'En retard depuis ' + (-n) + ' j' : n === 0 ? "Rappel aujourd'hui" : 'Rappel le ' + fr(next) + ' · dans ' + n + ' j') : (monthsDef === 0 ? 'Pas de rappel' : 'Prochain rappel à renseigner'),
+        soon, badge: n !== null && n < 0 ? 'En retard' : soon ? 'Dans moins d’un mois' : '', badgeBg: n !== null && n < 0 ? '#E0533D' : '#F2C94C', badgeFg: n !== null && n < 0 ? '#FFFFFF' : '#1E2A33', hasBadge: soon, n };
+    };
+    const products = [
+      prod('💉', 'Vaccin', 'vaccinProduit', 'vaccin2', 'vaccinNext', 12),
+      prod('🪱', 'Vermifuge', 'vermiProduit', 'vermifuge', 'vermiNext', 1),
+      prod('🛡️', 'Antipuces', 'puceProduit', 'antipuces', 'antipucesNext', 1)
+    ];
+    const rappels = products.filter(p => p.soon);
     return {
+      fontaine, products, hasRappel: rappels.length > 0,
+      rappelText: rappels.map(p => p.title.toLowerCase() + (p.n < 0 ? ' (en retard)' : ' dans ' + p.n + ' j')).join(', '),
       todayLabel: now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }),
       todayTasks, weekRows, weekDays, adminLog, noHistory: adminLog.length === 0,
       syncLabel: sync[0], syncBg: sync[1], syncFg: sync[2],
